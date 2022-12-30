@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.galgotialfest.viewmodels.DashboardViewModel" />
+        <variable
+            name="listner"
+            type="com.example.galgotialfest.ui.listners.DashboardMenuListingFragmenrListnere" />
+
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:setAdapterforListing="@{viewmodel.menusClickData}"
+            app:listener="@{listner}"
+            android:layout_marginBottom="10dp"
+            ></androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+</layout>

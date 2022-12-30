@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"></import>
+        <variable
+            name="toolbardata"
+            type="com.example.galgotialfest.binding.bindingLayoutModel.ToolbarBinding" />
+        >
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:id="@+id/toolbar_main">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/white"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardUseCompatPadding="true"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="@{v->toolbardata.clickListner.onArrowButtonClicked()}"
+                            android:src="@drawable/arrow_back"
+                            android:visibility="@{toolbardata.isBackButtonVisible ? View.VISIBLE : View.GONE}"></ImageView>
+
+                        <TextView
+                            android:id="@+id/toolbar_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/family1"
+                            android:text="@{toolbardata.toolbarTitle}"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold">
+
+
+                        </TextView>
+
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

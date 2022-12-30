@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="usertype"
+            type="Integer" />
+        <variable
+            name="callback"
+            type="com.example.galgotialfest.ui.listners.FragmentDetailsListingListener" />
+        <variable
+            name="detailsViewmodel"
+            type="com.example.galgotialfest.viewmodels.DetailsViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:id="@+id/sorry_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:gameData="@{detailsViewmodel.game}"
+                app:userType="@{usertype}"
+                android:textColor="#120F0F"
+                android:fontFamily="@font/pink_panther"
+                android:text="Soryy!!!....Looks Like You Do Not Have The Data.You can add the respective data by clicking below button "
+                android:textSize="16sp">
+
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/user_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/add"
+                android:overScrollMode="never"
+                android:padding="10dp"
+                app:detailsActivityListener="@{callback}"
+                app:setAdapterforDetailsListing="@{detailsViewmodel.game}"
+                app:usertype1="@{usertype}"></androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/semibold"
+                android:onClick="@{()->callback.onItemAddClicked(usertype)}"
+                android:text="Add"
+                android:textAllCaps="false"
+                android:textSize="16sp"></Button>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

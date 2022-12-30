@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "684948164234",
+    "project_id": "galgotialfest",
+    "storage_bucket": "galgotialfest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684948164234:android:ed4426a433e1ef4fb36773",
+        "android_client_info": {
+          "package_name": "com.example.galgotialfest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684948164234-1rio8hd6lhpg394ia4smmpe8c6gd9muj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSg6p-c7NICbNv4PpzXZvWWlzUS7PB8Oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684948164234-1rio8hd6lhpg394ia4smmpe8c6gd9muj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

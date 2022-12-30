@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="java.util.List"></import>
+        <variable
+            name="dashboardVM"
+            type="com.example.galgotialfest.viewmodels.DashboardViewModel"/>
+        <variable
+            name="listener"
+            type="com.example.galgotialfest.ui.listners.DashboardFragmentListner" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.DashboardActivity">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:overScrollMode="never"
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            app:setAdapter="@{dashboardVM.dashboardMenus}"
+            app:listner="@{listener}"
+            tools:listitem="@layout/dashboard_item"
+            android:layout_height="match_parent"
+            ></androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+</layout>

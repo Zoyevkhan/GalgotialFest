@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="toolbarData"
+            type="com.example.galgotialfest.binding.bindingLayoutModel.ToolbarBinding" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.DashboardActivity">
+
+        <include
+            android:id="@+id/toolbar_dashboard"
+            app:toolbardata="@{toolbarData}"
+            layout="@layout/custom_toolbar"></include>
+
+        <FrameLayout
+            android:layout_margin="5dp"
+            android:id="@+id/dashboard_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_dashboard"></FrameLayout>
+
+
+    </RelativeLayout>
+</layout>

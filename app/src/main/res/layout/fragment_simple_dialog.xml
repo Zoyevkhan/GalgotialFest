@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:viewBindingIgnore="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/semibold"
+                    android:text="Hey! You need to verify yourself by entering the password"
+                    android:textSize="20sp"
+                    android:textStyle="bold"></TextView>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_text"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text"
+                    android:layout_marginTop="20dp"
+                    android:hint="Enter Your Name"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_textValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/password_text"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name_text"
+                    android:layout_marginTop="20dp"
+                    android:hint="Enter password"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/password_textValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="40dp"
+                    android:layout_below="@+id/password_text"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    >
+                    <Button
+
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:text="Cancel"/>
+                    <Button
+                        android:id="@+id/btn_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="45dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:text="Submit"/>
+
+
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

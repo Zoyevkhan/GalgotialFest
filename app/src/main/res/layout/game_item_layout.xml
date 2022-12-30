@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.galgotialfest.model.CommonModel" />
+        <variable
+            name="itemclicklistner"
+            type="com.example.galgotialfest.ui.listners.DashboardMenuListingFragmenrListnere" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:onClick="@{()->itemclicklistner.onItemClicked(item)}"
+        android:layout_marginBottom="10dp"
+        android:layout_height="150dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/outdoor_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:gif="@{item.icon}"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/gradient_background"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/outdoor_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{item.name}"
+                android:fontFamily="@font/semibold"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"
+                android:textSize="20sp"></TextView>
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

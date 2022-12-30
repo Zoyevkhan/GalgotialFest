@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="CommonItem"
+            type="com.example.galgotialfest.model.CommonModel" />
+        <variable
+            name="listner"
+            type="com.example.galgotialfest.ui.listners.DashboardFragmentListner" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:onLongClick="@{()->listner.onItemLongClicked(CommonItem)}"
+        android:onClick="@{()->listner.onItemClicked(CommonItem)}"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/outdoor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardCornerRadius="5dp"
+
+            app:cardUseCompatPadding="true"
+            android:background="@color/white"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:background="@color/white"
+
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/img_outdoor"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/t_menu"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_outdoor"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@{CommonItem.name}"
+                        android:textColor="#C1000000"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/semibold" />
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>
